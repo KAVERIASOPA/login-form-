@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Food Delivery App</title>
+</head>
+<body>
+    <div class="container" id="app-container">
+        <div id="landing-page" class="form">
+            <h2>Welcome to Food Delivery App</h2>
+            <button onclick="switchForm('login-form')">Log In</button>
+            <button onclick="switchForm('signup-form')">Sign Up</button>
+        </div>
+
+        <div id="signup-form" class="form" style="display: none;">
+            <h2>Sign Up</h2>
+            <label for="signup-username">Username:</label>
+            <input type="text" id="signup-username" required>
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" required>
+            <button onclick="signup()">Sign Up</button>
+        </div>
+
+        <div id="login-form" class="form" style="display: none;">
+            <h2>Login</h2>
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" required>
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" required>
+            <button onclick="login()">Login</button>
+        </div>
+
+        <div id="upload-form" class="form" style="display: none;">
+            <h2>Upload Image</h2>
+            <input type="file" id="image-upload" accept="image/*">
+            <button onclick="uploadImage()">Upload</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
